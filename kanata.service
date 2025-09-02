@@ -1,0 +1,14 @@
+[Unit]
+Description=Kanata keyboard remapper (user)
+After=graphical-session.target
+
+[Service]
+Type=simple
+# ExecStart=%h/.cargo/bin/kanata -c %h/.config/kanata/config.kbd
+ExecStart=/home/leev/.cargo/bin/kanata -c /home/leev/.config/kanata/config.kbd
+Restart=on-failure
+RestartSec=2
+
+[Install]
+WantedBy=default.target
+

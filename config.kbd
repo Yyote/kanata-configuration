@@ -1,11 +1,15 @@
+(defcfg)
+
 (defsrc
-    caps
+  caps
+  lctl
 )
 
-(defalias 
-    escctrl (tap-hold 150 150 esc lctrl)
+(defalias
+  escctrl (tap-hold 80 80 esc lctl)
 )
 
 (deflayer base
-    @escctrl
+  @escctrl
+  grv
 )
